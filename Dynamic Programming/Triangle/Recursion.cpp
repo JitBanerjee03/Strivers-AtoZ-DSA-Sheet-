@@ -32,7 +32,7 @@ public:
       int temp1,temp2=INT_MAX;
       temp1=triangle[i][j]+Recursion(i+1,j,triangle);
 
-      if(j+1<triangle[0].size())
+      if(j+1<triangle[i].size())
       temp2=triangle[i][j+1]+Recursion(i+1,j+1,triangle);
 
       return min(temp1,temp2);
@@ -44,12 +44,16 @@ public:
 
 int main(){
   //[[2],[3,4],[6,5,7],[4,1,8,3]]
-  vector<vector<int>> triangle;
-  triangle.push_back({2});
-  triangle.push_back({3,4});
-  triangle.push_back({6,5,7});
-  triangle.push_back({4,1,8,3});
+  vector<vector<int>> triangle1;
+  triangle1.push_back({2});
+  triangle1.push_back({3,4});
+  triangle1.push_back({6,5,7});
+  triangle1.push_back({4,1,8,3});
 
+  vector<vector<int>> triangle2;
+  triangle2.push_back({-10});
   Solution Obj;
-  cout<<Obj.minimumTotal(triangle);
+  cout<<Obj.minimumTotal(triangle1);
+  cout<<endl;
+  cout<<Obj.minimumTotal(triangle2);
 }
