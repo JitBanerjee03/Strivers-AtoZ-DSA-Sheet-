@@ -106,7 +106,7 @@ void BFS(vector<vector<int>> &adjacencyMatrix,int *nodesValues,int startNode,int
 
 void DFS(vector<vector<int>> &adjacencyMatrix,int *nodesValues,vector<int> &isVisited,int i,int nodes,stack<int> &stackTemp){  //function prototype for DFS traversal of the graph
   
-  cout<<nodesValues[i];
+  cout<<nodesValues[i]<<" ";
   isVisited[i]=1;
   stackTemp.push(i);
 
